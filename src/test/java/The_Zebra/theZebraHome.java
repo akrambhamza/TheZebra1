@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 import java.io.IOException;
 
 
-public class theZebraTest extends Reusable_Library_Loggers {
+public class theZebraHome extends Reusable_Library_Loggers {
     ExtentReports reporter = null;
     ExtentTest logger = null;
     WebDriver driver = null;
@@ -84,7 +84,7 @@ public class theZebraTest extends Reusable_Library_Loggers {
         // Clicking What Frame is your house made out of Dropdown
         Reusable_Library_Loggers.click(driver, "//*[@data-cy='dropdown-construction_type']", "Frame Type Dropdown", logger);
         //Entering Frame Type
-        Reusable_Library_Loggers.click(driver, "//*[@data-cy='dropdown-construction_type-CONCRETE']", "Clicking Frame Type Masonry", logger);
+        Reusable_Library_Loggers.click(driver, "//*[@data-cy='dropdown-construction_type-CONCRETE']", "Clicking Frame Type Concrete", logger);
         Thread.sleep(500);
         // Clicking How Many Stories Dropdown
         Reusable_Library_Loggers.click(driver, "//*[@data-cy='dropdown-number_of_stories']", "Clicking How Many Stories Dropdown", logger);

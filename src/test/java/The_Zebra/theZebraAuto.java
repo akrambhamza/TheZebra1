@@ -15,7 +15,7 @@ import java.io.IOException;
 
 import static com.aventstack.extentreports.Status.INFO;
 
-public class Zebra_Test {
+public class theZebraAuto {
     ExtentReports reporter = null;
     ExtentTest logger = null;
     WebDriver driver = null;

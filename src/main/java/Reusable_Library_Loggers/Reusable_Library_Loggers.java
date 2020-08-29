@@ -139,21 +139,6 @@ public class Reusable_Library_Loggers {
             }
         }//end of click by js method
 
-        //method to click by index on an element
-        public static void clickByIndex(WebDriver driver,String locator,int index, String elementName,ExtentTest logger){
-            WebDriverWait wait = new WebDriverWait(driver,timeout);
-            try{
-                System.out.println("Clicking by index " + index + " on element " + elementName);
-                logger.log(LogStatus.INFO,"Clicking by index " + index + " on element " + elementName);
-                WebElement element = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(locator))).get(index);
-                element.click();
-            } catch (Exception e) {
-                System.out.println("Unable to click by index " + index +  " on element " + elementName + " " + e);
-                logger.log(LogStatus.FAIL,"Unable to click by index " + index +  " on element " + elementName + " " + e);
-                getScreenShot(driver,logger,elementName);
-            }
-        }//end of click by index method
-
     //method to return text from an element
     public static String captureText(WebDriver driver,String locator,String elementName,ExtentTest logger) throws InterruptedException, IOException {
         WebDriverWait wait = new WebDriverWait(driver,timeout);
